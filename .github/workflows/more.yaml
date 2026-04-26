@@ -28,8 +28,12 @@ jobs:
         with: 
           node-version: 24
           cache: 'npm'
+      - name: Install dep
+        run: npm ci
+            
       - name: Run Tests
         run: npm test --if-present
+        
 
   # JOB 3: Deploy (What you called 'Run')
   deploy:

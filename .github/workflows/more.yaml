@@ -32,4 +32,5 @@ jobs:
               else
                 echo "✅ Secret is LOADED (GitHub is masking it)"
               fi
+              echo repo var: ${{vars.REPO_VARIABLE}}
 

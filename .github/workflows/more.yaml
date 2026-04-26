@@ -27,6 +27,9 @@ jobs:
               echo "Building $PROJECT_NAME"
               echo "Mode is $BUILD_MODE"
               echo ${{ github.repository }}
-              echo env secret: ${{ secrets.ENV_SECRET }}
-              echo env variable: ${{ secrets.ENV_SECRET_VARIABLE }}
+              if [ -z "${{ secrets.ENV_SECRET }}" ]; then
+              echo "❌ Secret is EMPTY"
+              else
+                echo "✅ Secret is LOADED (GitHub is masking it)"
+              fi
 

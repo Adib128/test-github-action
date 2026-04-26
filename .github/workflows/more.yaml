@@ -26,4 +26,5 @@ jobs:
               npm test --if-present
               echo "Building $PROJECT_NAME"
               echo "Mode is $BUILD_MODE"
+              echo ${{ github.repository }}
 

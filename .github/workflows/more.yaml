@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get my code
+      - name: 1. Get my code
         uses: actions/checkout@v4
 
-      - name: Setup node
+      - name: 2. Setup node
         uses: actions/setup-node@v4
         with: 
           node-version: 24
 
-      - name: Check Node version
-        run: node -v
+      - name: 3. Install and Test
+        run: |
+              npm install
+              npm test --if-present
 

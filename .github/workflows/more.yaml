@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      BUILD_MODE: "productionsss"
+      BUILD_MODE: "Production"
 
     steps:
       - name: 1. Get my code
@@ -27,4 +27,5 @@ jobs:
               echo "Building $PROJECT_NAME"
               echo "Mode is $BUILD_MODE"
               echo ${{ github.repository }}
+              echo ${{ secrets.TEST_SECRET_VALUE }}
 

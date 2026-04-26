@@ -27,5 +27,6 @@ jobs:
               echo "Building $PROJECT_NAME"
               echo "Mode is $BUILD_MODE"
               echo ${{ github.repository }}
-              echo ${{ secrets.ENV_SECRET_VARIABLE }}
+              echo env secret: ${{ secrets.ENV_SECRET }}
+              echo env variable: ${{ secrets.ENV_SECRET_VARIABLE }}
 
